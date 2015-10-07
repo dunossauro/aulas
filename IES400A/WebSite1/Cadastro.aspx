@@ -7,18 +7,18 @@
     <h1>Cadastro de Contatos</h1>
             <br />
             Nome<br />
-            <asp:TextBox ID="NomeCliente" runat="server"></asp:TextBox>
+                <asp:TextBox ID="NomeCliente" runat="server"></asp:TextBox>
             <br />
             Endereço<br />
-            <asp:TextBox ID="Endereco" runat="server"></asp:TextBox>
+                <asp:TextBox ID="Endereco" runat="server"></asp:TextBox>
             <br />
             Email<br />
-            <asp:TextBox ID="EmailCliente" runat="server"></asp:TextBox>
+                 <asp:TextBox ID="EmailCliente" runat="server"></asp:TextBox>
             <br />
             Telefone<br />
-            <asp:TextBox ID="TelefoneCliente" runat="server" TextMode="SingleLine"></asp:TextBox>
+                <asp:TextBox ID="TelefoneCliente" runat="server" TextMode="SingleLine"></asp:TextBox>
             <br />
-            <asp:Button ID="Gravar" runat="server" onClick="Gravar_Click" Text="Gravar" />
+                <asp:Button ID="Gravar" runat="server" onClick="Gravar_Click" Text="Gravar" />
 
 </asp:Content>
 
