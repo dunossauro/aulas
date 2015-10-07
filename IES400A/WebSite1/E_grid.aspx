@@ -17,7 +17,8 @@
          <asp:GridView Width="30%" Height="5%" ID="GridView1" runat="server" AutoGenerateSelectButton="True" OnSelectedIndexChanged="grid" CssClass="grid" ></asp:GridView>
         
     </asp:Panel>
-        <br />
+      
+      <br />
          Nome
         <br />
         <asp:TextBox ID="NomeCliente" runat="server"></asp:TextBox><br />
