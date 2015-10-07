@@ -5,14 +5,12 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Cadastro : System.Web.UI.Page
-{
-    protected void Page_Load(object sender, EventArgs e)
-    {
+public partial class Cadastro : System.Web.UI.Page {
+    protected void Page_Load(object sender, EventArgs e) {
 
     }
-    protected void Gravar_Click(object sender, EventArgs e)
-    {
+    protected void Gravar_Click(object sender, EventArgs e) {
+        
         //string de conexao com o banco de dados "Access provedor  Microsoft.ACE.OLEDB.12.0"
         string conexao = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +
             Server.MapPath("~/Dados/Cadastro.accdb") + ";Persist Security Info=false";
