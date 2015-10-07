@@ -14,26 +14,26 @@
     
     <asp:Panel runat="server" ScrollBars="Auto" Width="10%" Height="10%">
        
-         <asp:GridView Width="30%" Height="5%" ID="GridView1" runat="server" AutoGenerateSelectButton="True" OnSelectedIndexChanged="grid" CssClass="grid" ></asp:GridView>
+         <asp:GridView Width="30%" Height="5%" ID="GridView1" runat="server" AutoGenerateSelectButton="True" OnSelectedIndexChanged="grid" CssClass="grid" >
+
+
+         </asp:GridView>
         
     </asp:Panel>
       
       <br />
-         Nome
-        <br />
-        <asp:TextBox ID="NomeCliente" runat="server"></asp:TextBox><br />
+         Nome<br />
+            <asp:TextBox ID="NomeCliente" runat="server"></asp:TextBox><br />
 
-        Email
-        <br />
-        <asp:TextBox ID="EmailCliente" runat="server" ></asp:TextBox><br />
+        Email<br />
+            <asp:TextBox ID="EmailCliente" runat="server" ></asp:TextBox><br />
 
-        Telefone
-        <br />
-        <asp:TextBox ID="TelefoneCliente" runat="server" ></asp:TextBox><br />
+        Telefone<br />
+            <asp:TextBox ID="TelefoneCliente" runat="server" ></asp:TextBox><br />
 
         <br />
-        <asp:Button ID="Salvar" runat="server" Text="Salvar " OnClick="Salvar_Click"/>
-        <asp:Button ID="Excluir" runat="server" Text="Excluir" OnClick="Excluir_Click"/>
+            <asp:Button ID="Salvar" runat="server" Text="Salvar " OnClick="Salvar_Click"/>
+            <asp:Button ID="Excluir" runat="server" Text="Excluir" OnClick="Excluir_Click"/>
 
 
 
