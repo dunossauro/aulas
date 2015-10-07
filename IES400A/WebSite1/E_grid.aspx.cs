@@ -6,6 +6,10 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 
+//Declarar notação absoluta da conexão, no lugar de Server.Map..., para eliminar notações repetitivas.
+//string conexao = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + "<caminho>/Dados/Cadastro.accdb" + ";Persist Security Info=false";
+
+
 public partial class E_grid : System.Web.UI.Page
 
 {
