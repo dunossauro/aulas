@@ -1,16 +1,15 @@
 ## Construir um sistema de chamados de helpdesk
 
   Banco de dados (A escolha);
-    Cadastro, login e chamados
+    `Cadastro, login e chamados`
     
-  Telas
+  Telas:
     Longin;
     Chamado;
     visão de tabelas;
     fomulários
     etc..
     
-  Engenharia
-  
+  Engenharia:
     Requisitos
       Funcionais, não funcionais (Patterns)
