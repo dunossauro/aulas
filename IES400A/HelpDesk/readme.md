@@ -4,7 +4,7 @@
     `Cadastro, login e chamados`
     
   Telas:
-    Longin;
+    Login;
     Chamado;
     visão de tabelas;
     fomulários
