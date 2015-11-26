@@ -12,7 +12,7 @@ para o auxilio de alunos na monitoria de programação II
 nov/2015
 
 obs: A fila não emplementa o ponteiro back, por esse fato uma gambiarra
-     foi inserida com com a variável _while
+     foi inserida com a variável _while
 
 Código por z4r4tu5tr4
 
