@@ -8,7 +8,7 @@ simulador de fila de processos
 Trabalho sugerido pro José Luis ZEM
 Para a disciplina de Sistemas operacionais
 ministradas na Fatec Americana
-para o auxilio de alunos na monitoria de programaçã II
+para o auxilio de alunos na monitoria de programação II
 nov/2015
 
 obs: A fila não emplementa o ponteiro back, por esse fato uma gambiarra
