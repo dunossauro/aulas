@@ -87,7 +87,7 @@ Portanto, dizemos que item está apontado para um endereço de memória, conform
 
 <div style="text-align:center" markdown="1">
 
-![imagem](/home/z4r4tu5tr4/Downloads/estrutura - aula 2.jpg)
+![imagem](https://raw.githubusercontent.com/z4r4tu5tr4/aulas/master/ED001A/estrutura.-.aula.2.jpg)
 
 </div>
 
