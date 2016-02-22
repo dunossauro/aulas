@@ -81,4 +81,47 @@ Para criar uma variável dinâmica, é preciso obter uma certa quantidade de esp
 
 ### O comando Malloc
 
-O procedimento `maloc` têm com parâmetro uma variável ponteiro e, quando ativado, aloca espaço em memória.
+O procedimento `maloc` têm com parâmetro uma variável ponteiro e, quando ativado, aloca espaço em memória para uma extrutura do tipo nó e faz com que o endereço dessa estrutura na memória deja armazenada na variável item.
+
+Portanto, dizemos que item está apontado para um endereço de memória, conforme a figura a baixo.
+
+<div style="text-align:center" markdown="1">
+
+![imagem](/home/z4r4tu5tr4/Downloads/estrutura - aula 2.jpg)
+
+</div>
+
+A estrutura dinâmica não é inicializada, pois nada é armazenada em item.
+
+A variável item contém o endereço de memória dessa estrutura, sendo possível a sua visualização via comando `printf`.
+
+Para acessar a estrutura dinâmica, escrevemos o nome da variável ponteiro, seguido do simbolo `->`. O exemplo abaixo identifica a estrutura, bem como, o reconhecimento da variável dinâmica, através da concatenação entre ponteiro e identificador dos campos.
+
+#### Exemplo
+
+               Identificador
+               |
+               V
+
+      Item -> código
+
+        |
+        V
+        Variável Ponteiro
+
+
+Uma variável dinâmica pode ser operacionaliza da mesma forma que as variáveis estátivas. Veremos:
+
+
+      scanf("%i", &item->codigo);
+      item -> contador ++;
+
+      if (item -> idade >= 18){
+
+         printf("Exibir o resultado do conteúdo do endereço", item -> idade')
+
+      }
+
+Podemos usar o comando de atribuição para as variáveis do tipo Ponteiro, desde que sejam de um mesmo tipo. Os operadores relacionais `=>`,`>`,`<`e`<=` também podem ser utilizados.
+
+Em uma contrante predefinida para o tipo ponteiro, que é identificado por `NULL`. O valor `NULL` não é nenhum endereço válido e é compatível com qualquer variável ponteiro.
