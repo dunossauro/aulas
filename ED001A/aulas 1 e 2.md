@@ -85,11 +85,9 @@ O procedimento `maloc` têm com parâmetro uma variável ponteiro e, quando ativ
 
 Portanto, dizemos que item está apontado para um endereço de memória, conforme a figura a baixo.
 
-<div style="text-align:center" markdown="1">
 
 ![imagem](https://raw.githubusercontent.com/z4r4tu5tr4/aulas/master/ED001A/estrutura.-.aula.2.jpg)
 
-</div>
 
 A estrutura dinâmica não é inicializada, pois nada é armazenada em item.
 
