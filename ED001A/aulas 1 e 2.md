@@ -123,3 +123,28 @@ Uma variável dinâmica pode ser operacionaliza da mesma forma que as variáveis
 Podemos usar o comando de atribuição para as variáveis do tipo Ponteiro, desde que sejam de um mesmo tipo. Os operadores relacionais `=>`,`>`,`<`e`<=` também podem ser utilizados.
 
 Em uma contrante predefinida para o tipo ponteiro, que é identificado por `NULL`. O valor `NULL` não é nenhum endereço válido e é compatível com qualquer variável ponteiro.
+
+A técnica que veremos a seguir permite acompanhar os ponteiro e posterioramente visualizar os resultados gerados pelo código abaixo:
+
+      type def struct no; {
+
+         int codigo;
+         string nome;
+
+      } no;
+
+      struct no *H, *P, *Z;
+
+      H = NULL;
+      P = NULL;
+      Z = NULL;
+
+      Z = (no*)malloc(sizeof(no));
+      P = Z;
+      H = Z;
+
+      scanf("%i" &Z -> codigo);
+      scanf("%s" &Z -> nome);
+
+      printf("Os dados são %i", P -> codigo);
+      printf("Os dados são %s", P -> nome);
