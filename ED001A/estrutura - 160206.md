@@ -1,6 +1,10 @@
-# Variáveis dinâmicas
+# Aula 1 e 2
 
-## Introdução
+> 06/02/16
+
+## Variáveis dinâmicas
+
+### Introdução
 
 Todas as estruuras de dados vistas anteriormente são estáticas. Isso é, as variáveis uma vez declaradas, implicam em alocação de memória fixo e pre-determinado.
 
@@ -27,13 +31,13 @@ Essa variável é conhecida como ponteiro.
 
 ------------------------------
 
-## Tipo Ponteiro
+### Tipo Ponteiro
 
 Os valores do tipo de ponteiro são endereço de memória da estrutura dinâmica.
 
 Uma variável do tipo ponteiro é definida pelo símbolo \* seguido do tipo da variável dinâmica que pode ser referenciada por esse ponteiro.
 
-### Ponteiro - Struct
+#### Ponteiro - Struct
 
 As variáveis Ponteiro podem ser associadas a um tipo de dado ou a um struct.
 
@@ -68,3 +72,13 @@ No exemplo acima, uma variável do tipo item pode rerefenciar ou apontar para um
 
 | Código | Nome | Idade | Salário |
 |--------|------|-------|---------|
+
+> 22/02/16
+
+A declaração da variável item não é inicializada. Isto é, nenhum valor é armazenado em item e na memória não existem ainda nenhuma estrutura do tipo item.
+
+Para criar uma variável dinâmica, é preciso obter uma certa quantidade de espaço de memória. No exemplo a cima, o espaço necessário é o número de bytes que acomoda o tipo item. A alocação desse espaço e sua localização na memória são feitas pela execução de um procedimento prédefinido chamado `maloc`.
+
+### O comando Malloc
+
+O procedimento `maloc` têm com parâmetro uma variável ponteiro e, quando ativado, aloca espaço em memória.
