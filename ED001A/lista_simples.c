@@ -71,7 +71,7 @@ void menu(){
 
 }
 
-//Funtion to append element to list (memory allocation)
+//Function to append element to list (memory allocation)
 void append(){
 
    if(start == NULL){
@@ -141,7 +141,7 @@ void _index(){
          auxiliar = auxiliar -> next;
       }
    }
-   printf("%s\n", "Name don't exists");
+   printf("%s\n", "Name doesn't exists");
 }
 
 //Remove only list element
