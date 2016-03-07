@@ -1,10 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <locale.h>
+#define STRLEN_MAX 20
 
 typedef struct no{
     int codigo;
-    char nome[20];
+    char nome[STRLEN_MAX];
     struct no *next;
 } no;
 
@@ -18,7 +19,7 @@ void enterdata(){
     scanf("%s", &auxiliar->nome);
 }
 
-void insere(no **Lista){
+void insere(){
     if (inicio == NULL)
     {
         corrente = (no*)malloc(sizeof(no));
@@ -31,6 +32,7 @@ void insere(no **Lista){
     }
     else
     {
+        auxiliar = corrente;
         corrente = (no*)malloc(sizeof(no));
 
         corrente->next = NULL;
@@ -46,7 +48,7 @@ void menu(){
 
     do
     {
-        system("cls");
+        system("clear");
 
         printf("=== MENU ====");
         printf("\n\n");
@@ -60,21 +62,21 @@ void menu(){
 
         scanf("%i", &opt);
 
-        system("cls");
+        system("clear");
 
         switch(opt)
         {
         case 1:
-            insere(&inicio);
+            insere();
             break;
         case 2:
-            exibir(&inicio);
+            exibir();
             break;
         case 3:
-            pesquisar(&inicio);
+            pesquisar();
             break;
         case 4:
-            remover(&inicio);
+            remover();
             break;
         default:
             exit(0);
@@ -84,7 +86,7 @@ void menu(){
     while(opt < 5);
 }
 
-void exibir(no **Lista){
+void exibir(){
     if (inicio == NULL)
     {
         printf("Lista vazia\n\n");
@@ -104,10 +106,10 @@ void exibir(no **Lista){
         }
     }
 
-    system("pause");
+    system("read");
 }
 
-void pesquisar(no **Lista){
+void pesquisar(){
     if (inicio == NULL)
     {
         printf("Lista vazia\n\n");
@@ -145,10 +147,10 @@ void pesquisar(no **Lista){
         }
     }
 
-    system("pause");
+    system("read");
 }
 
-void remover(no **Lista){
+void remover(){
     if (inicio == NULL)
     {
         printf("Lista vazia\n\n");
@@ -207,7 +209,7 @@ void remover(no **Lista){
         }
     }
 
-    system("pause");
+    system("read");
 }
 
 void main(){
