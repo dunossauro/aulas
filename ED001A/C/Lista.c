@@ -20,8 +20,7 @@ void enterdata(){
 }
 
 void insere(){
-    if (inicio == NULL)
-    {
+    if (inicio == NULL) {
         corrente = (no*)malloc(sizeof(no));
 
         inicio = corrente;
@@ -29,9 +28,8 @@ void insere(){
         corrente->next = NULL;
 
         enterdata();
-    }
-    else
-    {
+    } else {
+
         auxiliar = corrente;
         corrente = (no*)malloc(sizeof(no));
 
@@ -46,8 +44,7 @@ void insere(){
 void menu(){
     int opt = 0;
 
-    do
-    {
+    do {
         system("clear");
 
         printf("=== MENU ====");
@@ -64,8 +61,7 @@ void menu(){
 
         system("clear");
 
-        switch(opt)
-        {
+        switch(opt) {
         case 1:
             insere();
             break;
@@ -87,18 +83,15 @@ void menu(){
 }
 
 void exibir(){
-    if (inicio == NULL)
-    {
+    if (inicio == NULL){
         printf("Lista vazia\n\n");
-    }
-    else
-    {
+    } else {
         auxiliar = inicio;
 
         printf("==== Resultados ====\n\n");
 
-        while(auxiliar != NULL)
-        {
+        while(auxiliar != NULL){
+
             printf("Código: %i\n", auxiliar->codigo);
             printf("Nome: %s\n\n", auxiliar->nome);
 
@@ -110,12 +103,9 @@ void exibir(){
 }
 
 void pesquisar(){
-    if (inicio == NULL)
-    {
+    if (inicio == NULL){
         printf("Lista vazia\n\n");
-    }
-    else
-    {
+    } else {
         int cod = 0, res = 0;
 
         auxiliar = inicio;
@@ -125,24 +115,18 @@ void pesquisar(){
         printf("Digite o código desejado: ");
         scanf("%i", &cod);
 
-        while(auxiliar != NULL && res == 0)
-        {
-            if (auxiliar->codigo == cod)
-            {
+        while(auxiliar != NULL && res == 0){
+
+            if (auxiliar->codigo == cod){
                 res = 1;
-            }
-            else
-            {
+            } else {
                 auxiliar = auxiliar->next;
             }
         }
 
-        if (res)
-        {
+        if (res) {
             printf("Nome: %s\n\n", auxiliar->nome);
-        }
-        else
-        {
+        } else {
             printf("Nada encontrado!\n\n");
         }
     }
@@ -151,12 +135,9 @@ void pesquisar(){
 }
 
 void remover(){
-    if (inicio == NULL)
-    {
+    if (inicio == NULL){
         printf("Lista vazia\n\n");
-    }
-    else
-    {
+    } else {
         int cod = 0, res = 0;
 
         auxiliar = inicio;
@@ -166,8 +147,7 @@ void remover(){
         printf("Digite o código desejado: ");
         scanf("%i", &cod);
 
-        if (auxiliar->codigo == cod)
-        {
+        if (auxiliar->codigo == cod){
             res = 1;
 
             inicio = inicio->next;
@@ -175,36 +155,28 @@ void remover(){
 
             free(auxiliar);
         }
-        else
-        {
+        else {
             corrente = auxiliar;
             auxiliar = auxiliar->next;
 
-            while(auxiliar != NULL && res == 0)
-            {
-                if (auxiliar->codigo == cod)
-                {
+            while(auxiliar != NULL && res == 0){
+                if (auxiliar->codigo == cod){
                     res = 1;
 
                     corrente->next = auxiliar->next;
                     auxiliar->next = NULL;
 
                     free(auxiliar);
-                }
-                else
-                {
+                } else {
                     auxiliar = auxiliar->next;
                     corrente = corrente->next;
                 }
             }
         }
 
-        if (res)
-        {
+        if (res){
             printf("Removido!");
-        }
-        else
-        {
+        } else {
             printf("Nada encontrado!\n\n");
         }
     }
