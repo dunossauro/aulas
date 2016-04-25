@@ -1,33 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-/*
-
-simulador de fila de processos
-
-Trabalho sugerido pro José Luis ZEM
-Para a disciplina de Sistemas operacionais
-ministradas na Fatec Americana
-para o auxilio de alunos na monitoria de programação II
-nov/2015
-
-obs: A fila não emplementa o ponteiro back, por esse fato uma gambiarra
-     foi inserida com a variável _while
-
-Código por z4r4tu5tr4
-
-*/
-
-
-void creditos(){
-
-  system("clear");
-  printf("Eduardo Ferreira Mendes\n\n\n\n");
-  printf("Aperte enter para continuar");
-  system("read x");
-  menu();
-
-}
+int cont = 0, pid = 100, _while = 0;
 
 typedef struct no
 {
@@ -38,16 +12,16 @@ typedef struct no
 
 struct no *inicio, *auxiliar, *fim;
 
-int cont = 0, pid = 100, _while = 0;
 
 void enterdata()
 {
-    printf("Digite a quantidade de vezes em que o elemento deve ser processado: ");
+    printf("PID %d\nNº de Execuções: ", pid);
     scanf("%i", &auxiliar->proc);
     _while = _while + auxiliar->proc +1;
     auxiliar->pid = pid;
     pid++;
 }
+
 
 void enqueue(no **Lista)
 {
@@ -64,8 +38,9 @@ void enqueue(no **Lista)
     {
         if (cont >= 10)
         {
-            printf("Queue overflow...");
+            printf("Queue overflow...\n");
             printf("Aperte enter para continuar");
+	    system("read x");
 
         }
         else
@@ -80,13 +55,13 @@ void enqueue(no **Lista)
     }
 }
 
+
 void dequeue(no **Lista)
 {
     if (inicio == NULL)
     {
-        printf("Queue underflow...");
-        printf("Aperte enter para continuar");
-        system("read x");
+	system("clear");
+        printf("Queue underflow...\n\n");
 
     }
     else
@@ -96,12 +71,17 @@ void dequeue(no **Lista)
         inicio = inicio->next;
         auxiliar->next = NULL;
         free(auxiliar);
+	system("clear");
         printf("Removido com sucesso...\n\n\n");
-        printf("Aperte enter para continuar");
-        system("read x");
-        menu();
+	system("read x");
+
+
     }
+	printf("Aperte enter para continuar");
+	system("read x");
+        menu();
 }
+
 
 void menu()
 {
@@ -116,9 +96,8 @@ void menu()
         printf("2. Imprimir\n");
         printf("3. Pesquisar\n");
         printf("4. Remover\n");
-        printf("5. Esta lindu de morrer!!!\n");
-        printf("6. Creditos\n");
-        printf("7. Sair\n");
+        printf("5. Executar!!!\n");
+        printf("6. Sair\n");
         printf("\n\n");
         printf("Opcao: ");
 
@@ -142,15 +121,12 @@ void menu()
             break;
         case 5:
             executar(&inicio);
-        case 6:
-            creditos();
-            break;
         default:
             exit(0);
             break;
         }
     }
-    while(opt < 6);
+    while(opt < 5);
 }
 
 void exibir(no **Lista)
@@ -229,25 +205,24 @@ void executar(no **Lista)
     if (inicio == NULL){
       printf("Lista de execução vazia\n");
     }else{
-      _while = _while*2;
+      _while = _while*10;
       auxiliar = inicio;
       while (_while != 0) {
 
           _while--;
           if(auxiliar->proc > 0){
-                  printf("OÍA LÁ... Meu proc é: %d\tEmeu PID é: %d\n", auxiliar->proc, auxiliar->pid );
+                  printf("PID: %d\t|\tProc: %d\n", auxiliar->pid,auxiliar->proc);
                   auxiliar->proc--;
                   fim->next = inicio;
                   auxiliar = auxiliar->next;
                   sleep(1);
 
           }else if(auxiliar->proc == -1){
-            auxiliar = auxiliar->next;
-            //printf("Pulei\n");
-          }
-
-          else if (auxiliar->proc == 0){
-            printf("JEIZUIS, o processo: %d ACABOU :\()\n", auxiliar->pid);
+          
+		auxiliar = auxiliar->next;
+          
+	  }else if (auxiliar->proc == 0){
+            printf("PID: %d\t|\tProcessado \n", auxiliar->pid);
             auxiliar->proc = -1;
             auxiliar = auxiliar->next;
             sleep(1);
@@ -273,3 +248,4 @@ void main()
 
     menu();
 }
+
